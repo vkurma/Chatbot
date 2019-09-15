@@ -116,7 +116,7 @@ class LanguageIndex():
 
 def BiLSTM(units):
     #if tf.test.is_gpu_available():
-	lstm = tf.keras.layers.CuDNNLSTM(units,
+	lstm = tf.keras.layers.LSTM(units,
 									 return_sequences=True,
 									 return_state=True,
 									 recurrent_initializer='glorot_uniform')
@@ -135,7 +135,7 @@ def LSTM(units):
     # If you have a GPU, we recommend using CuDNNGRU(provides a 3x speedup than GRU)
     # the code automatically does that.
     #if tf.test.is_gpu_available():
-	lstm = tf.keras.layers.CuDNNLSTM(units,
+	lstm = tf.keras.layers.LSTM(units,
 									 return_sequences=True,
 									 return_state=True,
 									 recurrent_initializer='glorot_uniform')
